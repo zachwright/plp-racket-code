@@ -1,0 +1,20 @@
+#lang racket
+; ---------------------------
+; mutually recursive functions
+(define map-nlist
+  (lambda (f nlst)
+    (if (null? nlst)
+        '()
+        (cons (map-numexpr f (first nlst))
+              (map-nlist f (rest nlst)))
+        )
+    ))
+
+
+(define map-numexpr
+  (lambda (f numexpr)
+    (if (number? numexpr)
+        (f numexpr)
+        (map-nlist f numexpr)
+        )
+    ))
