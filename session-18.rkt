@@ -8,3 +8,15 @@
                            (all-varrefs (app->arg exp))))
           )
     ))
+
+;; scope example in racket
+(lambda (x y)
+  ((lambda (a)
+     (x (a y)))
+   x))
+
+;; LEXICAL ADDRESS
+;; (v : d p)
+;; v is a variable
+;; d is depth of the varref from it's declaration
+;; p is the position of variable in declaration list
