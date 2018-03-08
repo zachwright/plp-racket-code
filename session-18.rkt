@@ -15,8 +15,15 @@
      (x (a y)))
    x))
 
+; (x: 0 0)
+; (x: 1 0)
+; (y: 1 1)
+; (a: 0 0)
+
+
 ;; LEXICAL ADDRESS
 ;; (v : d p)
 ;; v is a variable
 ;; d is depth of the varref from it's declaration
 ;; p is the position of variable in declaration list
+
