@@ -1,0 +1,11 @@
+#lang racket
+
+(define lexical-address
+  (lambda (exp)
+    (cond ((varref? exp)
+           (list exp : 0 0))
+          ((lambda? exp) '())
+          ((app? exp) '())
+          ((if? exp) '())
+      )
+    ))
